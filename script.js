@@ -308,6 +308,34 @@
     });
   }
 
+  /* -------- scrollspy: ilumina o item do menu da seção atual -------- */
+  function setupScrollSpy() {
+    const ids = ["pacotes", "como-funciona", "faq", "contato"];
+    const map = {};
+    document.querySelectorAll(".nav__links a, .nav__mobile a, .link-soft").forEach(function (a) {
+      const h = a.getAttribute("href") || "";
+      if (h.charAt(0) === "#" && ids.indexOf(h.slice(1)) !== -1) {
+        (map[h.slice(1)] = map[h.slice(1)] || []).push(a);
+      }
+    });
+    const secs = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+    if (!secs.length) return;
+    function update() {
+      let current = null;
+      const y = window.scrollY;
+      secs.forEach(function (s) { if (s.offsetTop - 110 <= y) current = s.id; });
+      if (window.innerHeight + y >= document.documentElement.scrollHeight - 4) {
+        current = secs[secs.length - 1].id; // perto do fim → última seção
+      }
+      document.querySelectorAll(".nav__links a.active, .nav__mobile a.active, .link-soft.active")
+        .forEach(function (a) { a.classList.remove("active"); });
+      if (current && map[current]) map[current].forEach(function (a) { a.classList.add("active"); });
+    }
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    update();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     const y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
@@ -318,5 +346,6 @@
     setupReveals();
     setupTicker();
     setupTabs();
+    setupScrollSpy();
   });
 })();

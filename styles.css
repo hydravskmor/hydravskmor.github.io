@@ -198,6 +198,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
 .nav__links a::after { content: ""; position: absolute; left: 0; bottom: -6px; width: 0; height: 2px; background: var(--primary-glow); transition: width 0.2s; }
 .nav__links a:hover { color: var(--text); }
 .nav__links a:hover::after { width: 100%; }
+/* item ativo (scrollspy) iluminado */
+.nav__links a.active, .nav__mobile a.active, .link-soft.active { color: var(--primary-glow); text-shadow: 0 0 12px rgba(61, 220, 151, 0.5); }
+.nav__links a.active::after { width: 100%; }
 
 .nav__actions { display: flex; align-items: center; gap: 1rem; }
 .link-soft { font-weight: 500; font-size: 0.95rem; color: var(--text-muted); }
