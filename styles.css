@@ -590,19 +590,22 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
    FOOTER
    ============================================================ */
 .footer { background: var(--bg-elevated); border-top: 1px solid var(--border); padding-top: 3.5rem; }
-.footer__inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1.4fr; gap: 2rem; padding-bottom: 3rem; }
+.footer__inner { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 2rem; padding-bottom: 3rem; }
 .brand--footer .brand__text { font-size: 1.5rem; }
 .footer__brand p { margin: 1rem 0 1.2rem; font-size: 0.92rem; max-width: 38ch; }
 .footer__social { margin: 0 0 1.2rem; }
 .social-link { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text-muted); font-weight: 600; transition: color 0.18s; }
 .social-link:hover { color: var(--gold); }
-.social-icon { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); box-shadow: var(--glow-gold); flex: none; transition: transform 0.18s; }
+.social-icon { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); box-shadow: var(--glow-gold); flex: none; transition: transform 0.18s; }
 .social-link:hover .social-icon { transform: scale(1.06); }
 .footer__pay { display: flex; gap: 0.5rem; flex-wrap: wrap; }
 .footer__col h3 { font-size: 0.95rem; color: var(--text); margin-bottom: 1rem; letter-spacing: 0.06em; text-transform: uppercase; }
 .footer__col a { display: block; padding: 0.32rem 0; color: var(--text-muted); font-size: 0.92rem; transition: color 0.18s; }
 .footer__col a:hover { color: var(--primary-glow); }
 .footer__note { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 0.6rem; }
+.partners { display: flex; flex-direction: column; gap: 0.5rem; }
+.partners li { display: flex; align-items: center; gap: 0.45rem; color: var(--text-muted); font-weight: 600; font-size: 0.95rem; }
+.partners li::before { content: "🤝"; font-size: 0.9em; }
 .footer__bottom { border-top: 1px solid var(--border); padding: 1.4rem 0 calc(1.4rem + 72px); } /* espaço p/ FAB/ticker fixos */
 .footer__bottominner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem; }
 .footer__bottom p { font-size: 0.82rem; color: var(--text-faint); }
