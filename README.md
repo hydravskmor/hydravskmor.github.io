@@ -2,7 +2,7 @@
 
 Landing page de **compra e venda de Tibia Coins**. Tema dark inspirado no Tibia
 (verde da Hydra + dourado das coins), com calculadora de preço, pacotes,
-prova social e CTAs que abrem direto no WhatsApp/Discord.
+e CTAs que abrem direto no WhatsApp.
 
 Site **100% estático** (HTML + CSS + JS puro, sem build). É só abrir o
 `index.html` no navegador ou hospedar a pasta em qualquer lugar.
@@ -17,15 +17,14 @@ Site **100% estático** (HTML + CSS + JS puro, sem build). É só abrir o
 
 ## ⚙️ Configuração obrigatória antes de publicar
 
-Abra **`script.js`** e troque os dois valores no topo pelos seus contatos reais:
+Abra **`script.js`** e troque o WhatsApp no topo pelo seu número real:
 
 ```js
-const WHATSAPP = "5599999999999";            // seu número: DDI+DDD+numero (só dígitos)
-const DISCORD  = "https://discord.gg/hydrastore"; // seu convite do Discord
+const WHATSAPP = "5599999999999"; // seu número: DDI+DDD+numero (só dígitos)
 ```
 
-> Enquanto estiverem com os valores de exemplo, aparece um aviso no console do
-> navegador. Todos os botões de comprar/vender/suporte usam esses dois valores.
+> Enquanto estiver com o valor de exemplo, aparece um aviso no console do
+> navegador. Todos os botões de comprar/vender/suporte usam esse número.
 
 ## 💰 Editar pacotes e preços
 

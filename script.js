@@ -4,9 +4,8 @@
 (function () {
   "use strict";
 
-  /* -------- CONFIG: troque pelos seus contatos reais -------- */
+  /* -------- CONFIG: troque pelo seu contato real -------- */
   const WHATSAPP = "5599999999999";            // número com DDI+DDD (sem símbolos)
-  const DISCORD = "https://discord.gg/hydrastore"; // link do seu servidor
 
   const BRL = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
   const fmtCoins = new Intl.NumberFormat("pt-BR");
@@ -15,9 +14,9 @@
   const REDUCE_MOTION = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // avisa no console se os contatos ainda estão com valores de exemplo
-  if (WHATSAPP === "5599999999999" || DISCORD.indexOf("hydrastore") !== -1) {
-    console.warn("[HydraStore] Troque WHATSAPP e DISCORD em script.js pelos seus contatos reais antes de publicar.");
+  // avisa no console se o contato ainda está com valor de exemplo
+  if (WHATSAPP === "5599999999999") {
+    console.warn("[HydraStore] Troque WHATSAPP em script.js pelo seu número real antes de publicar.");
   }
 
   /* limites do pedido: a partir de 25 TC, de 25 em 25 */
@@ -194,7 +193,7 @@
     });
   }
 
-  /* -------- links de contato (WhatsApp / Discord) -------- */
+  /* -------- links de contato (WhatsApp) -------- */
   function wireContacts() {
     const msgs = {
       comprar: "Olá! Quero comprar Tibia Coins na HydraStore. 🐉",
@@ -203,11 +202,6 @@
     };
     document.querySelectorAll("[data-whats]").forEach(function (el) {
       el.setAttribute("href", waLink(msgs[el.dataset.whats] || msgs.comprar));
-      el.setAttribute("target", "_blank");
-      el.setAttribute("rel", "noopener");
-    });
-    document.querySelectorAll("[data-discord]").forEach(function (el) {
-      el.setAttribute("href", DISCORD);
       el.setAttribute("target", "_blank");
       el.setAttribute("rel", "noopener");
     });
