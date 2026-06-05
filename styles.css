@@ -250,15 +250,18 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
   animation: bubbleTalk 3.2s ease-in-out infinite;
 }
 @keyframes bubbleTalk { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.022); } }
-/* setinha apontando pra baixo (entre os dois NPCs) */
-.speech-bubble::before {
-  content: ""; position: absolute; left: 116px; bottom: -22px;
+/* duas setinhas: uma pro Yasir e outra pro Rashid (os dois falam juntos) */
+.bubble-tail { position: absolute; bottom: 0; width: 0; height: 0; }
+.bubble-tail::before { /* contorno verde */
+  content: ""; position: absolute; left: -22px; bottom: -22px;
   border: 22px solid transparent; border-top-color: var(--border-accent); border-bottom: 0;
 }
-.speech-bubble::after {
-  content: ""; position: absolute; left: 119px; bottom: -17px;
+.bubble-tail::after { /* preenchimento (fundo do balão) */
+  content: ""; position: absolute; left: -19px; bottom: -17px;
   border: 19px solid transparent; border-top-color: var(--bg-elevated); border-bottom: 0;
 }
+.bubble-tail--y { left: 55px; }   /* aponta pro Yasir */
+.bubble-tail--r { left: 187px; }  /* aponta pro Rashid */
 
 /* NPCs mercadores (Yasir & Rashid) no hero — o sprite já traz o nome */
 .hero__npcs { display: flex; gap: 1.4rem; margin: 0; }
