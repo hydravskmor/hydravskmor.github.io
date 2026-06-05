@@ -650,9 +650,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
   .nav__mobile { display: flex; }
   .hero__inner { grid-template-columns: 1fr; }
   .hero__art { order: -1; min-height: 320px; }
-  .coinstack { --orbit: 115px; }
-  .hero__hydra { width: min(160px, 46%); }
-  .fi--3, .fi--4, .fi--8 { display: none; } /* menos itens orbitando em telas menores */
+  .coinstack { --orbit: 118px; }
+  .hero__hydra { width: min(150px, 42%); }
+  .float-item { width: 46px; } /* tamanho uniforme p/ os 8 fecharem o círculo no mobile */
   .hero__sub, .hero__price { max-width: none; }
   .calc__bottom { grid-template-columns: 1fr; }
   .calc__bright { align-items: stretch; text-align: left; }
