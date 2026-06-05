@@ -594,7 +594,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
 .brand--footer .brand__text { font-size: 1.5rem; }
 .footer__brand p { margin: 1rem 0 1.2rem; font-size: 0.92rem; max-width: 38ch; }
 .footer__social { margin: 0 0 1.2rem; }
-.social-link { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text-muted); font-weight: 600; transition: color 0.18s; }
+.social-link, .footer__col .social-link { display: inline-flex; align-items: center; gap: 0.6rem; color: var(--text-muted); font-weight: 600; transition: color 0.18s; }
 .social-link:hover { color: var(--gold); }
 .social-icon { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; border: 2px solid var(--gold); box-shadow: var(--glow-gold); flex: none; transition: transform 0.18s; }
 .social-link:hover .social-icon { transform: scale(1.06); }
