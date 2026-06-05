@@ -590,7 +590,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
    FOOTER
    ============================================================ */
 .footer { background: var(--bg-elevated); border-top: 1px solid var(--border); padding-top: 3.5rem; }
-.footer__inner { display: grid; grid-template-columns: 2fr 1.2fr 1fr; gap: 2rem; padding-bottom: 3rem; }
+.footer__inner { display: grid; grid-template-columns: 2fr 1fr 1.2fr 1fr; gap: 2rem; padding-bottom: 3rem; align-items: start; }
 .brand--footer .brand__text { font-size: 1.5rem; }
 .footer__brand p { margin: 1rem 0 1.2rem; font-size: 0.92rem; max-width: 38ch; }
 .footer__social { margin: 0 0 1.2rem; }
