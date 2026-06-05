@@ -607,7 +607,7 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
 .partners li { display: flex; align-items: center; gap: 0.45rem; color: var(--text-muted); font-weight: 600; font-size: 0.95rem; }
 .partners li::before { content: "🤝"; font-size: 0.9em; }
 .footer__bottom { border-top: 1px solid var(--border); padding: 1.4rem 0 calc(1.4rem + 72px); } /* espaço p/ FAB/ticker fixos */
-.footer__bottominner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.6rem; }
+.footer__bottominner { display: flex; flex-wrap: wrap; justify-content: center; text-align: center; gap: 0.6rem; }
 .footer__bottom p { font-size: 0.82rem; color: var(--text-faint); }
 .footer__disclaimer { max-width: 60ch; }
 
