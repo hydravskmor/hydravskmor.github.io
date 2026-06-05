@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HydraStore — Compre e Venda Tibia Coins | Entrega Instantânea</title>
+  <meta name="description" content="HydraStore: a casa do aventureiro brasileiro para comprar e vender Tibia Coins. Entrega instantânea via trade in-game, pagamento por PIX, melhor preço e suporte 24/7." />
+  <meta name="theme-color" content="#0A0F0D" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="HydraStore — Tibia Coins na velocidade da Hydra" />
+  <meta property="og:description" content="Compre e venda Tibia Coins com entrega instantânea, preço de verdade e segurança total. Pague no PIX." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon: sprite oficial das Tibia Coins -->
+  <link rel="icon" type="image/png" href="assets/tibia-coin.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a href="#main" class="skip">Pular para o conteúdo</a>
+
+  <!-- Filtro SVG: distorção elétrica (raio) da moldura da calculadora -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="calcLightning" x="-30%" y="-30%" width="160%" height="160%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.015 0.045" numOctaves="2" seed="3" result="noise">
+          <animate attributeName="seed" values="2;7;3;9;4;8" dur="0.7s" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="7" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- ======================= NAV ======================= -->
+  <header class="nav" id="topo">
+    <div class="container nav__inner">
+      <a href="#topo" class="brand" aria-label="HydraStore — início">
+        <span class="brand__mark" aria-hidden="true">
+          <img class="brand__logo" src="assets/hydra-black-no-bg.png" alt="" width="40" height="40" />
+        </span>
+        <span class="brand__text">Hydra<span class="brand__accent">Store</span></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Navegação principal">
+        <a href="#pacotes">Comprar</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <div class="nav__actions">
+        <a href="#contato" class="link-soft" title="Suporte 24/7">Suporte</a>
+        <a href="#pacotes" class="btn btn--gold btn--sm">Comprar Agora</a>
+      </div>
+
+      <button class="nav__burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMobile">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <a href="#pacotes">Comprar</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contato">Suporte</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <div class="hero__speech">
+          <div class="speech-bubble">
+            <h1 class="hero__title">BEM-VINDO À NOSSA LOJA<span class="hero__title-ar" dir="rtl" lang="ar">أهلاً بكم في متجرنا</span></h1>
+          </div>
+          <div class="hero__npcs">
+            <img class="hero__npc" src="assets/npc/yasir.gif" alt="Yasir" width="64" height="64" />
+            <img class="hero__npc" src="assets/npc/rashid.gif" alt="Rashid" width="64" height="64" />
+          </div>
+        </div>
+
+        <div class="hero__cta">
+          <a href="#pacotes" class="btn btn--gold btn--lg cta-pulse cta-pulse--green">⚡ Comprar Tibia Coins</a>
+          <a href="#vender" class="btn btn--ghost btn--lg">💰 Vender minhas Coins</a>
+        </div>
+
+        <div class="trustbar__delivery hero__delivery">
+          <span class="trustbar__icon" aria-hidden="true">⚡</span>
+          <div class="trustbar__deltext">
+            <span class="trustbar__big">Entrega em ~5 min</span>
+            <span class="trustbar__label">após confirmação do pagamento, entrega automatizada</span>
+          </div>
+        </div>
+
+        <p class="hero__price"><strong>R$ 55,00</strong> a cada 250 Tibia Coins</p>
+      </div>
+
+      <div class="hero__art" aria-hidden="true">
+        <div class="coinstack">
+          <span class="float-item fi--1"><img src="assets/items/golden-armor.webp" alt="" /></span>
+          <span class="float-item fi--2"><img src="assets/items/magic-plate-armor.webp" alt="" /></span>
+          <span class="float-item fi--3"><img src="assets/items/demon-shield.webp" alt="" /></span>
+          <span class="float-item fi--4"><img src="assets/items/falcon-longsword.webp" alt="" /></span>
+          <span class="float-item fi--5"><img src="assets/items/soft-boots.webp" alt="" /></span>
+          <span class="float-item fi--6"><img src="assets/items/soulcutter.webp" alt="" /></span>
+          <span class="float-item fi--7"><img src="assets/tibia-coin.webp" alt="" /></span>
+          <span class="float-item fi--8"><img src="assets/tibia-coin-icon.gif" alt="" /></span>
+        </div>
+        <div class="hero__hydra">
+          <img src="assets/hydra-black-no-bg.png" alt="HydraStore" />
+        </div>
+      </div>
+    </div>
+    <div class="scale-divider" aria-hidden="true"></div>
+  </section>
+
+  <!-- ======================= COMPRAR (abas) ======================= -->
+  <section class="section section--alt" id="pacotes">
+    <div class="container">
+      <div class="tabs" role="tablist" aria-label="Formas de comprar">
+        <button class="tab is-active" id="tab-comprar" role="tab" aria-selected="true" aria-controls="panel-comprar" data-panel="panel-comprar">⚡ Comprar</button>
+        <button class="tab" id="tab-pacotes" role="tab" aria-selected="false" aria-controls="panel-pacotes" data-panel="panel-pacotes">📦 Comprar Pacotes</button>
+      </div>
+
+      <!-- aba COMPRAR: escolha a quantidade exata -->
+      <div class="tabpanel" id="panel-comprar" role="tabpanel" aria-labelledby="tab-comprar">
+        <p class="tabpanel__hint">Escolha a quantidade exata de Tibia Coins e compre na hora:</p>
+        <div class="calc" id="calc" style="--charge:0">
+        <div class="calc__charge" aria-hidden="true"></div>
+
+        <div class="calc__top">
+          <div class="calc__toprow">
+            <label class="calc__toplabel" for="calcInput">
+              Quantidade:
+              <input type="number" id="calcInput" min="25" max="15000" step="25" value="25" inputmode="numeric" class="calc__qtyinput" aria-label="Quantidade de Tibia Coins" />
+              Tibia Coins
+            </label>
+            <div class="calc__pay" aria-label="Formas de pagamento">
+              <img class="paylogo" src="assets/pay/pix.svg" alt="PIX" />
+              <img class="paylogo" src="assets/pay/visa.svg" alt="Visa" />
+              <img class="paylogo" src="assets/pay/mastercard.svg" alt="Mastercard" />
+              <img class="paylogo" src="assets/pay/elo.svg" alt="Elo" />
+            </div>
+          </div>
+          <input type="range" id="calcRange" min="25" max="15000" step="25" value="25" class="calc__range" aria-label="Quantidade de Tibia Coins" />
+          <div class="calc__quick">
+            <button data-q="25">25</button>
+            <button data-q="250">250</button>
+            <button data-q="1000">1.000</button>
+            <button data-q="3000">3.000</button>
+            <button data-q="9000">9.000</button>
+            <button data-q="15000">15.000</button>
+          </div>
+        </div>
+
+        <div class="calc__bottom">
+          <div class="calc__bleft">
+            <span class="coinbig calc__bcoin" aria-hidden="true"><img class="coinimg" src="assets/tibia-coin.webp" alt="" width="32" height="32" /></span>
+            <p class="calc__quote" id="calcQuote" aria-live="polite"></p>
+          </div>
+          <div class="calc__bright">
+            <p class="calc__total"><span id="calcTotal">R$ 5,50</span></p>
+            <p class="calc__rate">Preço por coin: <strong id="calcRate">R$ 0,220</strong></p>
+            <a href="#contato" class="btn btn--gold calc__buy cta-pulse" id="calcBuy"><img class="btn-coin" src="assets/tibia-coin-icon.gif" alt="" width="12" height="12" /> Comprar</a>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <!-- aba COMPRAR PACOTES: os pacotes prontos -->
+      <div class="tabpanel" id="panel-pacotes" role="tabpanel" aria-labelledby="tab-pacotes" hidden>
+        <div class="grid grid--3 packages" id="packages"><!-- preenchido por JS --></div>
+        <p class="packages__note">Precisa de uma quantidade diferente? Use a aba <a href="#" data-gotab="panel-comprar">Comprar</a> ou fale no suporte para pedidos acima de 27.500 coins.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= HOW IT WORKS ======================= -->
+  <section class="section section--alt" id="como-funciona">
+    <div class="container">
+      <header class="section__head">
+        <span class="eyebrow">Como funciona</span>
+        <h2>Suas Coins em 4 passos</h2>
+        <p class="section__lead">Simples, rápido e seguro — do PIX ao trade in-game.</p>
+      </header>
+
+      <ol class="steps">
+        <li class="step">
+          <span class="step__num">1</span>
+          <h3>Escolha seu pacote</h3>
+          <p>Selecione a quantidade de Tibia Coins que cabe na sua aventura e adicione ao carrinho.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">2</span>
+          <h3>Pague com PIX</h3>
+          <p>Finalize o pedido e pague em segundos via PIX, com confirmação automática e segura.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">3</span>
+          <h3>Combine o trade</h3>
+          <p>Nosso atendente fala com você pelo Discord ou WhatsApp pra alinhar o mundo e o horário.</p>
+        </li>
+        <li class="step">
+          <span class="step__num">4</span>
+          <h3>Receba no jogo</h3>
+          <p>Marque o trade in-game e receba suas Tibia Coins direto no personagem. Boa hunt!</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ======================= SELL ======================= -->
+  <section class="section section--alt" id="vender">
+    <div class="container">
+      <div class="sell">
+        <div class="sell__copy">
+          <span class="eyebrow">Vender Coins</span>
+          <h2>Tem Coins sobrando? <span class="text-glow">A Hydra compra.</span></h2>
+          <p>Transforme suas Tibia Coins em dinheiro na conta. Combinamos o trade in-game, você transfere as Coins e o PIX cai na sua conta logo em seguida. Sem burocracia, com o melhor valor de recompra do mercado.</p>
+          <ul class="sell__list">
+            <li>💸 Pagamento via PIX na hora</li>
+            <li>🔒 Trade 100% dentro das regras do jogo</li>
+            <li>📈 Cotação justa e transparente</li>
+          </ul>
+          <a href="#" class="btn btn--gold btn--lg" data-whats="vender">Quero vender minhas Coins</a>
+        </div>
+        <div class="sell__art" aria-hidden="true">
+          <span class="coinbig coinbig--float"><img class="coinimg" src="assets/tibia-coin.webp" alt="" width="32" height="32" /></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FAQ ======================= -->
+  <section class="section" id="faq">
+    <div class="container container--narrow">
+      <header class="section__head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Perguntas frequentes</h2>
+        <p class="section__lead">Tudo que você precisa saber antes de marcar o trade.</p>
+      </header>
+
+      <div class="faq" id="faq-list">
+        <details class="faq__item">
+          <summary>Comprar Tibia Coins na HydraStore pode dar ban?</summary>
+          <div class="faq__a">Não. Todas as nossas entregas são feitas via trade oficial dentro do jogo, respeitando as regras da CipSoft. Nunca pedimos sua senha nem acessamos sua conta, então sua conta fica 100% segura.</div>
+        </details>
+        <details class="faq__item">
+          <summary>Quanto tempo demora pra receber minhas Coins?</summary>
+          <div class="faq__a">Após a confirmação do pagamento, a entrega costuma acontecer em poucos minutos. Em horários de pico, o prazo máximo é de algumas horas, e você acompanha tudo direto pelo Discord ou WhatsApp.</div>
+        </details>
+        <details class="faq__item">
+          <summary>Quais são as formas de pagamento?</summary>
+          <div class="faq__a">Trabalhamos principalmente com PIX, que é instantâneo e seguro. Fale com o suporte caso queira combinar outra forma de pagamento, como cartão ou boleto.</div>
+        </details>
+        <details class="faq__item">
+          <summary>Como faço pra vender minhas Tibia Coins?</summary>
+          <div class="faq__a">É simples: clique em "Vender minhas Coins", informe a quantidade e seu mundo. Combinamos o trade in-game, você nos transfere as Coins e o pagamento via PIX cai na sua conta logo em seguida.</div>
+        </details>
+        <details class="faq__item">
+          <summary>Preciso informar qual mundo e personagem?</summary>
+          <div class="faq__a">Sim. Para realizar o trade precisamos do nome do seu personagem e do seu mundo (Monza, Antica, Yonabra, etc.). Assim conseguimos marcar a entrega no servidor correto e no horário que for melhor pra você.</div>
+        </details>
+        <details class="faq__item">
+          <summary>A HydraStore é confiável mesmo?</summary>
+          <div class="faq__a">Com certeza. Somos uma loja especializada com milhares de trades realizados, avaliações reais de jogadores e suporte humano 24/7. Operamos sempre dentro das regras do Tibia para garantir uma experiência tranquila e segura.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FINAL CTA ======================= -->
+  <section class="finalcta" id="contato">
+    <div class="finalcta__glow" aria-hidden="true"></div>
+    <div class="container finalcta__inner">
+      <h2>Pronto para comprar suas Tibia Coins?</h2>
+      <p>Entrega imediata, 100% seguro e pago no PIX. A Hydra está esperando você.</p>
+      <div class="finalcta__actions">
+        <a href="#" class="btn btn--gold btn--lg" data-whats="comprar">💬 Comprar no WhatsApp</a>
+        <a href="#" class="btn btn--ghost btn--lg" data-discord>🎮 Entrar no Discord</a>
+      </div>
+      <p class="finalcta__guarantee">🔒 Entrega garantida ou seu dinheiro de volta.</p>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand brand--footer">
+          <span class="brand__text">Hydra<span class="brand__accent">Store</span></span>
+        </span>
+        <p>A HydraStore é a casa do aventureiro brasileiro para comprar e vender Tibia Coins com segurança, preço justo e entrega relâmpago. Mais de 10 mil trades realizados sempre dentro das regras do jogo.</p>
+        <div class="footer__social">
+          <a href="https://www.instagram.com/hydrastorex/" target="_blank" rel="noopener" class="social-link" aria-label="Instagram da HydraStore (@hydrastorex)">
+            <img src="assets/hydra-img.png" alt="" class="social-icon" width="44" height="44" />
+            <span>@hydrastorex</span>
+          </a>
+        </div>
+        <div class="footer__pay">
+          <img class="paylogo" src="assets/pay/pix.svg" alt="PIX" />
+          <img class="paylogo" src="assets/pay/visa.svg" alt="Visa" />
+          <img class="paylogo" src="assets/pay/mastercard.svg" alt="Mastercard" />
+          <img class="paylogo" src="assets/pay/elo.svg" alt="Elo" />
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <h3>Loja</h3>
+        <a href="#pacotes">Comprar Coins</a>
+        <a href="#vender">Vender Coins</a>
+        <a href="#como-funciona">Como funciona</a>
+      </div>
+
+      <div class="footer__col">
+        <h3>Ajuda</h3>
+        <a href="#faq">FAQ</a>
+        <a href="#" data-whats="suporte">WhatsApp 24/7</a>
+        <a href="#" data-discord>Discord</a>
+      </div>
+
+      <div class="footer__col">
+        <h3>Contato</h3>
+        <p class="footer__note">Fale com a gente a qualquer hora pelo Discord ou WhatsApp. Nosso suporte 24/7 está pronto pra te atender.</p>
+        <p class="footer__note">Que a Hydra esteja com você! 🐉</p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottominner">
+        <p>© <span id="year">2026</span> HydraStore. Todos os direitos reservados.</p>
+        <p class="footer__disclaimer">Loja independente especializada em Tibia Coins. Tibia® é uma marca registrada da CipSoft GmbH. Não somos afiliados oficialmente à CipSoft.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= FLOATING SUPPORT ======================= -->
+  <a href="#" class="fab" data-whats="suporte" aria-label="Falar no WhatsApp">
+    <span class="fab__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.043zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+    </span>
+    <span class="fab__text">Suporte 24/7</span>
+  </a>
+
+  <!-- ======================= ORDER TICKER ======================= -->
+  <div class="ticker" id="ticker" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
