@@ -658,6 +658,9 @@ h1, h2, h3, h4 { font-family: var(--font-head); color: var(--text); line-height:
   .calc__bright { align-items: stretch; text-align: left; }
   .sell { grid-template-columns: 1fr; }
   .sell__art { display: none; }
+  /* perf mobile: sem filtro SVG de turbulência nem flicker (pesado em GPU mobile);
+     mantém só um glow leve que cresce/muda de cor com a carga */
+  .calc__charge { filter: none; animation: none; box-shadow: 0 0 calc(4px + 18px * var(--charge)) var(--c); }
 }
 
 @media (max-width: 560px) {

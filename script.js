@@ -164,8 +164,14 @@
       const v = parseInt(input.value, 10);
       update(Number.isNaN(v) ? MIN_COINS : v, true);
     });
+    // arraste: coalesce as atualizações em 1 por frame (suaviza no mobile)
+    let rafQueued = false, rafVal = MIN_COINS;
     range.addEventListener("input", function () {
-      update(parseInt(range.value, 10), true);
+      rafVal = parseInt(range.value, 10);
+      if (!rafQueued) {
+        rafQueued = true;
+        requestAnimationFrame(function () { rafQueued = false; update(rafVal, true); });
+      }
     });
     document.querySelectorAll(".calc__quick button").forEach(function (b) {
       b.addEventListener("click", function () {
