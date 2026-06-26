@@ -20,10 +20,10 @@ Site **100% estático** (HTML + CSS + JS puro, sem build). É só abrir o
 Abra **`script.js`** e troque o WhatsApp no topo pelo seu número real:
 
 ```js
-const WHATSAPP = "5599999999999"; // seu número: DDI+DDD+numero (só dígitos)
+const WHATSAPP = "5541995168492"; // seu número: DDI+DDD+numero (só dígitos)
 ```
 
-> Enquanto estiver com o valor de exemplo, aparece um aviso no console do
+> Se o valor estiver fora do formato esperado, aparece um aviso no console do
 > navegador. Todos os botões de comprar/vender/suporte usam esse número.
 
 ## 💰 Editar pacotes e preços

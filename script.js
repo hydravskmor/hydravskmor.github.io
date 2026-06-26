@@ -5,7 +5,7 @@
   "use strict";
 
   /* -------- CONFIG: troque pelo seu contato real -------- */
-  const WHATSAPP = "5599999999999";            // número com DDI+DDD (sem símbolos)
+  const WHATSAPP = "5541995168492";            // número com DDI+DDD (sem símbolos)
 
   const BRL = new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" });
   const fmtCoins = new Intl.NumberFormat("pt-BR");
@@ -14,9 +14,9 @@
   const REDUCE_MOTION = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  // avisa no console se o contato ainda está com valor de exemplo
-  if (WHATSAPP === "5599999999999") {
-    console.warn("[HydraStore] Troque WHATSAPP em script.js pelo seu número real antes de publicar.");
+  // avisa no console se o contato estiver fora do formato esperado
+  if (!/^\d{12,13}$/.test(WHATSAPP)) {
+    console.warn("[HydraStore] Configure WHATSAPP em script.js com DDI+DDD+número, usando só dígitos.");
   }
 
   /* limites do pedido: a partir de 25 TC, de 25 em 25 */
