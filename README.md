@@ -28,20 +28,26 @@ const WHATSAPP = "5541995168492"; // seu número: DDI+DDD+numero (só dígitos)
 
 ## 💰 Editar pacotes e preços
 
-Tudo fica no array `PACKAGES` em `script.js`:
+Os valores principais ficam no topo do `script.js`:
 
 ```js
-{ name: "Pacote Guerreiro", coins: 1000, price: 109.90, save: "Economize 8%", popular: true, desc: "..." }
+const SELL_PRICE_PER_250 = 54; // venda para o cliente
+const BUY_PRICE_PER_250 = 52;  // recompra do cliente
+```
+
+Os pacotes prontos ficam no array `PACKAGES`:
+
+```js
+{ name: "Pacote Guerreiro", coins: 1000, price: 216.00, save: "", popular: true, desc: "..." }
 ```
 
 - `coins` — quantidade de Tibia Coins
-- `price` — preço em R$ (número, ex.: `109.90`)
+- `price` — preço em R$ (número, ex.: `216.00`)
 - `save` — selo de economia (ex.: `"Economize 8%"`) ou `""` pra esconder
 - `popular: true` — destaca o card como "Mais Popular" (só um deve ser `true`)
 
-A **calculadora** usa o preço exato do pacote quando a quantidade bate com um
-deles; para quantidades intermediárias, interpola pelas faixas em `tierRate()`.
-Os limites do pedido são `MIN_COINS` e `MAX_COINS` (no topo do `script.js`).
+A **calculadora** usa o preço fixo definido em `SELL_PRICE_PER_250`.
+Os limites do pedido são `MIN_COINS` e `MAX_COINS` no topo do `script.js`.
 
 ## 🎨 Trocar cores
 

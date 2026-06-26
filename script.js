@@ -24,17 +24,19 @@
   const MAX_COINS = 15000;
   const STEP_COINS = 25;
 
-  /* preço FIXO e linear: R$ 55 a cada 250 Tibia Coins, sem desconto por volume */
-  const RATE = 55 / 250; // R$ 0,22 por coin
+  /* preço FIXO e linear, sem desconto por volume */
+  const SELL_PRICE_PER_250 = 54;
+  const BUY_PRICE_PER_250 = 52;
+  const RATE = SELL_PRICE_PER_250 / 250; // R$ 0,216 por coin
 
   /* -------- catálogo de pacotes (preço = coins * RATE) -------- */
   const PACKAGES = [
-    { name: "Pacote Aprendiz",        coins: 250,   price: 55.00,   save: "", popular: false, desc: "O ponto de partida ideal pra renovar o Premium ou dar aquele upgrade rápido." },
-    { name: "Pacote Caçador",         coins: 500,   price: 110.00,  save: "", popular: false, desc: "Coins suficientes pra um monte de outfits, addons e mounts essenciais." },
-    { name: "Pacote Guerreiro",       coins: 1000,  price: 220.00,  save: "", popular: true,  desc: "Pra quem joga sério: Premium estendido, XP boosts e bagagem na mochila." },
-    { name: "Pacote Cavaleiro Real",  coins: 3000,  price: 660.00,  save: "", popular: false, desc: "Estoque de Coins pra temporadas inteiras de hunt, train e mercado." },
-    { name: "Pacote Lorde Dragão",    coins: 9000,  price: 1980.00, save: "", popular: false, desc: "Para guildas e investidores: estoque alto pra qualquer projeto." },
-    { name: "Pacote Senhor da Hydra", coins: 27500, price: 6050.00, save: "", popular: false, desc: "O baú definitivo. Estoque máximo e prioridade total na entrega." },
+    { name: "Pacote Aprendiz",        coins: 250,   price: 54.00,   save: "", popular: false, desc: "O ponto de partida ideal pra renovar o Premium ou dar aquele upgrade rápido." },
+    { name: "Pacote Caçador",         coins: 500,   price: 108.00,  save: "", popular: false, desc: "Coins suficientes pra um monte de outfits, addons e mounts essenciais." },
+    { name: "Pacote Guerreiro",       coins: 1000,  price: 216.00,  save: "", popular: true,  desc: "Pra quem joga sério: Premium estendido, XP boosts e bagagem na mochila." },
+    { name: "Pacote Cavaleiro Real",  coins: 3000,  price: 648.00,  save: "", popular: false, desc: "Estoque de Coins pra temporadas inteiras de hunt, train e mercado." },
+    { name: "Pacote Lorde Dragão",    coins: 9000,  price: 1944.00, save: "", popular: false, desc: "Para guildas e investidores: estoque alto pra qualquer projeto." },
+    { name: "Pacote Senhor da Hydra", coins: 27500, price: 5940.00, save: "", popular: false, desc: "O baú definitivo. Estoque máximo e prioridade total na entrega." },
   ];
 
   /* preço de qualquer quantidade: linear, sem desconto */
@@ -204,7 +206,7 @@
     const msgs = {
       comprar: "Olá! Quero comprar Tibia Coins na HydraStore. 🐉",
       suporte: "Olá! Preciso de ajuda com a HydraStore.",
-      vender: "Olá! Quero vender minhas Tibia Coins na HydraStore.",
+      vender: "Olá! Quero vender minhas Tibia Coins na HydraStore. Vi que a recompra está em " + BRL.format(BUY_PRICE_PER_250) + " a cada 250 TC.",
     };
     document.querySelectorAll("[data-whats]").forEach(function (el) {
       el.setAttribute("href", waLink(msgs[el.dataset.whats] || msgs.comprar));
